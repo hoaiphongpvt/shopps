@@ -1,5 +1,5 @@
 <div class="header d-flex justify-content-between">
-    <p class="h2 text-primary">QUẢN LÝ SINH VIÊN</p>
+    <a href="http://localhost/phpmvc/Home/"><p class="h2 text-primary">QUẢN LÝ SINH VIÊN</p></a>
     <ul class="nav justify-content-end">
         <li class="nav-item">
             <a href="http://localhost/phpmvc/Home/" class="nav-link">Trang chủ</a>
