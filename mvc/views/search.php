@@ -17,6 +17,7 @@
             require_once "./public/assets/components/formatCurrency.php";
             require_once "./mvc/views/blocks/navbar.php";
             require_once "./mvc/views/pages/".$data['Page'].".php";
+            require_once "./mvc/views/blocks/pagination.php";
             require_once "./mvc/views/blocks/footer.php";
         ?>
         <!-- Bootstrap core JS-->
