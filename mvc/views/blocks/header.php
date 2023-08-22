@@ -1,17 +1,8 @@
-<div class="header d-flex justify-content-between">
-    <a href="http://localhost/phpmvc/Home/"><p class="h2 text-primary">QUẢN LÝ SINH VIÊN</p></a>
-    <ul class="nav justify-content-end">
-        <li class="nav-item">
-            <a href="http://localhost/phpmvc/Home/" class="nav-link">Trang chủ</a>
-        </li>
-        <li class="nav-item">
-            <a href="http://localhost/phpmvc/Home/addSinhVien" class="nav-link">Thêm sinh viên</a>
-        </li>
-        <li class="nav-item">
-            <a href="http://localhost/phpmvc/Home/updateSinhVien" class="nav-link">Sửa sinh viên</a>
-        </li>
-        <li class="nav-item">
-            <a href="http://localhost/phpmvc/Home/deleteSinhVien" class="nav-link">Xóa sinh viên</a>
-        </li>
-    </ul>
-</div>
+ <!-- Header-->
+ <header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Shop in style</h1>
+        </div>
+    </div>
+</header>
