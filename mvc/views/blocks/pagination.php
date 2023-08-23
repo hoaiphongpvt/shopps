@@ -5,11 +5,11 @@
         $page = $num + 1;
         if ($num == $data['CurrentPage']) {
           echo '<li class="page-item active">
-                <a href="http://localhost/shopps/?page=' . $num . '" class="page-link">' .$page. '</a>
+                <a href="?page=' . $num . '" class="page-link">' .$page. '</a>
              </li>';
         } else {
           echo '<li class="page-item">
-                <a href="http://localhost/shopps/?page=' . $num . '" class="page-link">' .$page. '</a>
+                <a href="?page=' . $num . '" class="page-link">' .$page. '</a>
               </li>';
         }
       }
