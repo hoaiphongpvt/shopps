@@ -24,4 +24,22 @@ $(document).ready(function() {
         }
     });
     
+    // Phân trang
+    // $(".page-link").click(function() {
+    //     const page = $(this).data("page");  // Lấy giá trị của thuộc tính data-page
+    //     $.ajax({
+    //         url: "./mvc/controller/Home/pagination", // Đường dẫn tới controller xử lý phân trang
+    //         type: "POST",
+    //         data: { page: page },  // Truyền tham số page
+    //         success: function(data) {
+    //             // Xử lý dữ liệu trả về từ máy chủ
+    //             console.log(data);
+    //             // Đổ dữ liệu ra màn hình hoặc thực hiện các xử lý khác tùy theo dữ liệu
+    //         },
+    //         error: function(error) {
+    //             console.error("Error:", error);
+    //         }
+    //     });
+    // });
+    
 });

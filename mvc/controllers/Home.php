@@ -8,11 +8,19 @@
         }
 
         function index() {
-            $list = $this->ProductModel->getListProducts();
-            $this->view("home", [
+            $current_page = 0;
+            if (isset($_GET['page'])) {
+                $current_page = $_GET['page'];
+            }
+            $item_per_page = 12;
+            $list =  $this->ProductModel->getListProductsPagition($item_per_page, $current_page); 
+            $total = $this->ProductModel->getListProducts();
+            $this->view('home', [
                 "Page"=>"main",
-                "List"=>$list
+                "List"=>$list,
+                "CurrentPage"=>$current_page,
+                "TotalPage"=> ceil(count($total) / $item_per_page)
             ]);
-        }  
+        }
     }
 ?>

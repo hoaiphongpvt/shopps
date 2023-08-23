@@ -16,6 +16,22 @@
             return $products;
         }
 
+        public function getListProductsPagition($num_items, $num_current_page) {
+            $offset = $num_current_page * $num_items;  // Tính offset dựa trên trang hiện tại và số lượng bản ghi trên mỗi trang
+            $query = "SELECT * FROM sanpham ORDER BY ID ASC LIMIT $offset, $num_items";
+            $result = mysqli_query($this->conn, $query);
+            $products = [];
+            
+            if ($result) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $products[] = $row;
+                }
+                mysqli_free_result($result);
+            }
+
+            return $products;
+        }
+
         public function getProductByID($ID) {
             $query = "SELECT * FROM sanpham WHERE ID='$ID'";
             $result = mysqli_query($this->conn, $query);
