@@ -87,5 +87,20 @@
             }
             return $list;
         }
+
+        public function getListProductsByCompany($ID) {
+            $query = "SELECT * FROM sanpham WHERE ID_NSX= ".$ID;
+            $result = mysqli_query($this->conn, $query);
+
+            $list = [];
+            if ($result) {
+                while($row = mysqli_fetch_assoc($result)) {
+                    $list[] = $row;
+                }
+                mysqli_free_result($result);
+            }
+
+            return $list;
+        }
     }
 ?>

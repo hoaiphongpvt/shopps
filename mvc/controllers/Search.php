@@ -18,6 +18,7 @@
             $this->view("search", [
                 "Page"=>"search",
                 "ResultSearch"=>$ResultSearch,
+                "Total"=>count($ResultSearch),
                 "CurrentPage"=>$current_page,
                 "TotalPage"=> ceil(count($ResultSearch) / $item_per_page)
             ]);

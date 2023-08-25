@@ -1,23 +1,23 @@
 <nav class="container navbar navbar-light mt-2 d-flex justify-content-between align-items-center flex-wrap px-4 px-lg-5">
 
     <div class="d-flex">
-        <a class="navbar-brand border rounded d-flex align-items-center" href="?nsx=1">
+        <a class="navbar-brand border rounded d-flex align-items-center" href="?companyID=1">
             <img src="./public/assets/img/logo-banner/logo-iphone-220x48.png" width="92" height="20" alt="iPhone">
         </a>
 
-        <a class="navbar-brand border rounded d-flex align-items-center" href="?nsx=2">
+        <a class="navbar-brand border rounded d-flex align-items-center" href="?companyID=2">
             <img src="./public/assets/img/logo-banner/samsungnew-220x48-1.png" width="92" height="20" alt="Samsung">
         </a>
 
-        <a class="navbar-brand border rounded d-flex align-items-center" href="?nsx=3">
+        <a class="navbar-brand border rounded d-flex align-items-center" href="?companyID=3">
             <img src="./public/assets/img/logo-banner/logo-xiaomi-220x48-5.png" width="92" height="20" alt="Xiaomi">
         </a>
 
-        <a class="navbar-brand border rounded d-flex align-items-center" href="?nsx=4">
+        <a class="navbar-brand border rounded d-flex align-items-center" href="?companyID=4">
             <img src="./public/assets/img/logo-banner/OPPO42-b_5.jpg" width="92" height="20" alt="OPPO">
         </a>
 
-        <a class="navbar-brand border rounded d-flex align-items-center" href="?nsx=5">
+        <a class="navbar-brand border rounded d-flex align-items-center" href="?companyID=5">
             <img src="./public/assets/img/logo-banner/vivo-logo-220-220x48-3.png" width="92" height="20" alt="Vivo">
         </a>
     </div>

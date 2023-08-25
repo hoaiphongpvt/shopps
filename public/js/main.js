@@ -20,8 +20,7 @@ $(document).ready(function() {
         var value = $("#keyword").val();
         if (!value) {
             event.preventDefault();
-            alert("Vui lòng nhập thông tin cần tìm!");
         }
     });
-    
+
 });

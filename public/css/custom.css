@@ -26,3 +26,7 @@
 .form-control:focus {
     box-shadow: none !important;
 }
+
+.mt-6 {
+    margin-top: 3.5rem !important;
+}
