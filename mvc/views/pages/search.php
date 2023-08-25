@@ -1,7 +1,13 @@
 <!-- Section-->
 <section class="py-3">
     <div class="container px-4 px-lg-5 mt-3">
-        <h2 class="h4 mb-5">Tìm thấy <span class="text-danger"><?php echo $data['Total']?></span> kết quả phù hợp</h2>
+        <?php 
+            if ($data['Total'] > 0) {
+                echo '<h2 class="h4 mb-5">Tìm thấy <span class="text-danger">'.$data['Total'].'</span> kết quả phù hợp.</h2>';
+            } else {
+                echo '<h2 class="h4 mb-5">Không tìm thấy kết quả phù hợp.</h2>';
+            }
+        ?>
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php 
                 foreach($data['ResultSearch'] as $key => $value) {

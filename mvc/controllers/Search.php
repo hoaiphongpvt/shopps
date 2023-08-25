@@ -2,25 +2,47 @@
     class Search extends Controller {
 
         public $ProductModel;
+        public $ResultSearch;
 
         function __construct() {
             $this->ProductModel = $this->model("ProductModel");
         }
 
         function index() {
-            $keyword = $_POST['keyword'];
-            $ResultSearch = $this->ProductModel->searchProducts($keyword); 
-            $current_page = 0;
-            if (isset($_GET['page'])) {
-                $current_page = $_GET['page'];
+            // Tìm kiếm theo từ khóa
+            if (isset($_POST['keyword'])) {
+                $keyword = $_POST['keyword'];
+                $this->ResultSearch = $this->ProductModel->searchProducts($keyword); 
             }
-            $item_per_page = 4;
+            
+            // Lọc theo giá
+            if (isset($_POST['price'])) {
+                if ($_POST['price'] !== '') {
+                    $priceRange = $_POST['price'];
+                    $this->ResultSearch = $this->ProductModel->getListProductsByPrice($priceRange); 
+                }
+            }
+
+            // Lọc theo RAM
+            if (isset($_POST['ram'])) {
+                if ($_POST['ram'] !== '') {
+                    $ram = $_POST['ram'];
+                    $this->ResultSearch = $this->ProductModel->getListProductsByRAM($ram); 
+                }  
+            }   
+
+            // Lọc theo dung lượng
+            if (isset($_POST['storage'])) {
+                if ($_POST['storage'] !== '') {
+                    $storage = $_POST['storage'];
+                    $this->ResultSearch = $this->ProductModel->getListProductsByStorage($storage); 
+                }  
+            } 
+
             $this->view("search", [
                 "Page"=>"search",
-                "ResultSearch"=>$ResultSearch,
-                "Total"=>count($ResultSearch),
-                "CurrentPage"=>$current_page,
-                "TotalPage"=> ceil(count($ResultSearch) / $item_per_page)
+                "ResultSearch"=>$this->ResultSearch,
+                "Total"=>count($this->ResultSearch),
             ]);
         } 
     }

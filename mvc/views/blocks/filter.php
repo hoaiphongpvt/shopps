@@ -1,3 +1,17 @@
+<!-- Modal -->
+<div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" style="padding: 10px;">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Thông báo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-danger">
+        Vui lòng chọn điều kiện cần lọc!
+      </div>
+    </div>
+  </div>
+</div>
 <nav class="container navbar navbar-light mt-2 d-flex justify-content-between align-items-center flex-wrap px-4 px-lg-5">
 
     <div class="d-flex">
@@ -22,50 +36,34 @@
         </a>
     </div>
 
-    <div class="d-flex justify-content-between align-items-center">
-        <div class="dropdown ms-3">
-            <a class="btn border dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Giá
-            </a>
+    <form action="./Search" method="post" id="formFilter" class="d-flex justify-content-between align-items-center">
+        <select class="form-select ms-2" name="price">
+            <option value="" selected>Giá</option>
+            <option value="<4">Dưới 4 triệu</option>
+            <option value="4-8">Từ 4 đến 8 triệu</option>
+            <option value="8-20">Từ 8 đến 20 triệu</option>
+            <option value=">20">Trên 20 triệu</option>
+        </select>
 
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Từ 2 - 4 triệu</a></li>
-                <li><a class="dropdown-item" href="#">Từ 4 - 10 triệu</a></li>
-                <li><a class="dropdown-item" href="#">Từ 10 - 20 triệu</a></li>
-                <li><a class="dropdown-item" href="#">Trên 20 triệu</a></li>
-            </ul>
-        </div>
+        <select class="form-select ms-2" name="ram">
+            <option value="" selected>RAM</option>
+            <option value="3">3 GB</option>
+            <option value="4">4 GB</option>
+            <option value="6">6 GB</option>
+            <option value="8">8 GB</option>
+            <option value="12">12 GB</option>
+        </select> 
 
-        <div class="dropdown  ms-3">
-            <a class="btn border dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Ram
-            </a>
+        <select class="form-select ms-2" name="storage">
+            <option value="" selected>Dung lượng</option>
+            <option value="64">64GB</option>
+            <option value="128">128 GB</option>
+            <option value="256">256 GB</option>
+            <option value="512">512 GB</option>
+            <option value="1TB">1 TB</option>
+        </select> 
 
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">3 GB</a></li>
-                <li><a class="dropdown-item" href="#">4 GB</a></li>
-                <li><a class="dropdown-item" href="#">6 GB</a></li>
-                <li><a class="dropdown-item" href="#">8 GB</a></li>
-                <li><a class="dropdown-item" href="#">12 GB</a></li>
-            </ul>
-        </div>
+        <button id="btnFilter" type="submit" class="btn bg-danger text-white ms-3">LỌC</button>
 
-        <div class="dropdown ms-3">
-            <a class="btn border dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dung lượng
-            </a>
-
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">32 GB</a></li>
-                <li><a class="dropdown-item" href="#">64 GB</a></li>
-                <li><a class="dropdown-item" href="#">128 GB</a></li>
-                <li><a class="dropdown-item" href="#">256 GB</a></li>
-                <li><a class="dropdown-item" href="#">512 GB</a></li>
-                <li><a class="dropdown-item" href="#">1 TB</a></li>
-            </ul>
-        </div>
-
-        <button class="btn bg-danger text-white ms-3">LỌC</button>
-
-    </div>
+    </form>
 </nav>

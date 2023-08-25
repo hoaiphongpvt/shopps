@@ -23,7 +23,7 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    <div class="col-4 ms-3 d-flex flex-column">
+    <div class="col-4 d-flex flex-column">
         <img src="./public/assets/img/logo-banner/sticky-s21fe-390x97.png" class="img-fluid" alt="sticky">
         <img src="./public/assets/img/logo-banner/a58-390-97-390x97.png" class="img-fluid" alt="sticky">
     </div>

@@ -23,4 +23,21 @@ $(document).ready(function() {
         }
     });
 
+    //Lọc
+    $('#formFilter').submit(function(event) {
+        var price = $('select[name="price"]').val();
+        var ram = $('select[name="ram"]').val();
+        var storage = $('select[name="storage"]').val();
+    
+        if (price === "" && ram === "" && storage === "") {
+          $(".modal").show();
+          event.preventDefault(); // Ngăn chặn việc gửi biểu mẫu nếu chưa chọn gì
+        }
+    });
+
+    // Close modal
+    $(".btn-close").click(function() {
+        $(".modal").hide();
+    })
+
 });
