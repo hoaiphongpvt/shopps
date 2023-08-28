@@ -27,10 +27,10 @@ $(document).ready(function() {
 
         if (username && password) {
             $.post("Login/checkLogin", { username: username, password: password }, function(data) {
-                if (data == 0) {
-                    $("#msg").html("Tên tài khoản hoặc mật khẩu không đúng!");
+                if (data > 0) {
+                    $("#formLogin")[0].submit(); // Gửi form nếu thông tin đúng  
                 } else {
-                    $("#formLogin")[0].submit(); // Gửi form nếu thông tin đúng
+                    $("#msg").html("Tên tài khoản hoặc mật khẩu không đúng!");
                 }
             });
         }

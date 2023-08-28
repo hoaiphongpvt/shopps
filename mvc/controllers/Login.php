@@ -14,6 +14,22 @@
             ]);
         }
 
+        public function login() {
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+
+            $result = $this->UserModel->Login($username, $password);
+            if ($result) {
+                $_SESSION["user"] = $result;
+                header('location: ../');
+            }
+        }
+
+        public function logout() {
+            unset($_SESSION['user']);
+            header('location: ../');
+        }
+
         public function checkLogin() {
             $username = $_POST['username'];
             $password = $_POST['password'];

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Kết quả tìm kiếm</title>
+        <title>Thông tin người dùng</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./public/assets/img/favicon/favicon.ico" />
         <!-- Bootstrap icons-->

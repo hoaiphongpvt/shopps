@@ -7,7 +7,7 @@
           class="img-fluid" alt="Phone image">
       </div>
       <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
-        <form id="formLogin" action="" method="post">
+        <form id="formLogin" action="Login/login" method="post">
           <h1 class="h2 mb-sm-5 text-center">ĐĂNG NHẬP</h1>
           <!-- Email input -->
           <div class="form-outline mb-4">
@@ -19,15 +19,6 @@
           <div class="form-outline mb-4">
             <input name="password" type="password" id="password" class="form-control form-control-lg" placeholder="Mật khẩu" require/>
             <p id="msg-password" class="form-label ps-sm-3 h6 text-danger"></p>
-          </div>
-
-          <div class="d-flex justify-content-between align-items-center mb-2">
-            <!-- Checkbox -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-              <label class="form-check-label" for="form1Example3">Remember me</label>
-            </div>
-            <a href="#!">Quên mật khẩu?</a>
           </div>
           <div>
             <p>Bạn chưa có tài khoản? <a href="./SignUp">Đăng kí</a></p>

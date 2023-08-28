@@ -16,14 +16,24 @@
             </form>
             <div class="d-flex">
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button class="btn btn-outline-dark me-sm-2" type="submit">
                         <i class="bi-cart-fill me-1"></i>
                         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
-                <a href="./Login" id="login" class="btn btn-outline-dark ms-2">
-                        Đăng nhập
-                </a>
+                <?php 
+                    if(isset($_SESSION['user'])) {
+                        $user = $_SESSION['user'];
+                        echo '<a href="./Profile" class="btn btn-outline-dark">
+                                <i class="bi bi-person-square"></i>
+                                '.$user['TENDANGNHAP'].'
+                            </a>';
+                    } else {
+                        echo '<a href="./Login" id="login" class="btn btn-outline-dark">
+                                Đăng nhập
+                             </a>';
+                    }
+                ?>
             </div>
         </div>
     </div>
