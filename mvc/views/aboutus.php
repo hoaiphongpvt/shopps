@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <title>Kết quả tìm kiếm</title>
+        <title>Giới thiệu</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="./public/assets/img/favicon/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -14,7 +14,6 @@
     </head>
     <body>
         <?php 
-            require_once "./public/assets/components/formatCurrency.php";
             require_once "./mvc/views/blocks/navbar.php";
             require_once "./mvc/views/pages/".$data['Page'].".php";
             require_once "./mvc/views/blocks/footer.php";
@@ -27,6 +26,5 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <!-- Core theme JS-->
         <script src="./public/js/main.js"></script>
-        <script src="./public/js/ajax.js"></script>
     </body>
 </html>
