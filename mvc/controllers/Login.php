@@ -13,12 +13,6 @@
                 "Page"=>"login"
             ]);
         }
-        
-        public function checkUserName() {
-            $username = $_POST['username'];
-            $result = $this->UserModel->getUserByUsername($username);
-            echo $result;
-        }
 
         public function checkLogin() {
             $username = $_POST['username'];
