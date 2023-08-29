@@ -1,5 +1,5 @@
 <?php 
-    $user = $_SESSION['user']
+    $user = $_SESSION['user'];
 ?>
 <section style="background-color: #eee;">
   <div class="container py-3">
@@ -71,7 +71,7 @@
         <div class="col-12 mb-3 mb-lg-5">
             <div class="overflow-hidden card table-nowrap table-card">
                 <div class="card-header d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Đơn hàng đã mua</h5>
+                    <h5 class="mb-0">Danh sách đơn hàng</h5>
                 </div>
                 <div class="table-responsive px-sm-2">
                     <table class="table mb-0">
@@ -84,7 +84,7 @@
                                 <th>Phương thức thanh toán</th>
                                 <th>Tổng tiền</th>
                                 <th>Trạng thái</th>
-                                <th class="text-end">Action</th>
+                                <th class="text-end">Chi tiết</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -93,12 +93,17 @@
                                     echo '<tr class="align-middle">
                                             <td class="text-center">'.$data['List'][$i]['ID_HOADON'].'</td>
                                             <td>'.date('d/m/Y', strtotime($data['List'][$i]['NGAYLAP'])).'</td>
-                                            <td>'.date('d/m/Y', strtotime($data['List'][$i]['NGAYGIAO'])).'</td>
+                                            <td>'.(isset($data['List'][$i]['NGAYGIAO']) ? date('d/m/Y', strtotime($data['List'][$i]['NGAYGIAO'])) : '').'</td>
                                             <td>'.$data['List'][$i]['DIACHI'].'</td>
                                             <td class="text-center">'.$data['List'][$i]['PHUONGTHUCTT'].'</td>
                                             <td>'.currency_format($data['List'][$i]['TONGTIEN']).'</td>
                                             <td>'.$data['List'][$i]['TRANGTHAI'].'</td>
-                                            <td class="text-center"><a class="text-decoration-none" href="?idHD='.$data['List'][$i]['ID_HOADON'].'">Xem</a></td>
+                                            <td class="text-center">
+                                              <form action="./Profile" method="post">
+                                                <input type="hidden" name="IDHD" value="'.$data['List'][$i]['ID_HOADON'].'"/>
+                                                <button type="submit" class="btn btn-outline-info">Xem</button>
+                                              </form>
+                                            </td>
                                         </tr>
                                     ';
                                 }

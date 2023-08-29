@@ -17,6 +17,7 @@
             require_once "./public/assets/components/formatCurrency.php";
             require_once "./mvc/views/blocks/navbar.php";
             require_once "./mvc/views/pages/".$data['Page'].".php";
+            require_once "./mvc/views/blocks/orderDetails.php";
             require_once "./mvc/views/blocks/footer.php";
         ?>
         <!-- Bootstrap core JS-->
@@ -27,5 +28,6 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <!-- Core theme JS-->
         <script src="./public/js/main.js"></script>
+        <script src="./public/js/orderDetails.js"></script>
     </body>
 </html>

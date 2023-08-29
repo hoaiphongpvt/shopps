@@ -1,8 +1,6 @@
 <?php 
 
-    class Profile extends Controller {
-        
-        public $UserModel;
+    class Profile extends Controller { 
         public $OrderModel;
 
         function __construct() {
@@ -13,15 +11,29 @@
             $user = $_SESSION['user'];
             $ID = $user['ID'];
             $listOrders = $this->getListOrdersByUser($ID);
-
-            $this->view("profile", [
-                "Page"=>"profile",
-                "List"=>$listOrders
-            ]);
+            if (isset($_POST['IDHD'])) {
+                $IDHD = $_POST['IDHD'];
+                $orderDetails = $this->getListOrderDetails($IDHD);
+                $this->view("profile", [
+                    "Page"=>"profile",
+                    "List"=>$listOrders,
+                    "OrderDetails"=>$orderDetails
+                ]);
+            } else {
+                $this->view("profile", [
+                    "Page"=>"profile",
+                    "List"=>$listOrders
+                ]);
+            }
+            
         }
 
         public function getListOrdersByUser($ID) {
             return $this->OrderModel->getOrdersByUserID($ID);
+        }
+
+        public function getListOrderDetails($IDHD) {
+            return $this->OrderModel->getOrderDetails($IDHD);
         }
     }
 ?>
